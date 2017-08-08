@@ -3,9 +3,13 @@ import {connect} from 'react-redux'
 import {fetchPosts} from '../actions'
 
 let LoadSubreddit = ({dispatch}) => (
-  <button
-    onClick={() => dispatch(fetchPosts('newzealand'))}
-    >Fetch Posts</button>
+  <div>
+    <input id="subredditInput" type="text" name="subreddit" />
+    <button
+      onClick={() => dispatch(fetchPosts(document.getElementById('subredditInput').value))}
+      >Fetch Posts</button>
+  </div>
+
 )
 
 export default connect()(LoadSubreddit)

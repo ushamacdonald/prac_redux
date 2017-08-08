@@ -7,6 +7,7 @@ function subreddits (state = [], action) {
 
     default:
       return state
+      console.log("error");
   }
 }
 
